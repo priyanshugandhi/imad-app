@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/band', function (req,res) {
-   res.sendFile('bandindex.html'); 
+   res.sendFile(path.join(__dirname, 'ui', 'bandindex.html')); 
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
