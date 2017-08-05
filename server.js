@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var band ={
-    title:'Priyanshu Gandhhi',
+    title:'Priyanshu Gandhi',
     heading:'THE BAND',
     content: `We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
 };
@@ -51,7 +51,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/band', function (req,res) {
-   res.sendFile(createTemplate(band)); 
+   res.send(createTemplate(band)); 
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
