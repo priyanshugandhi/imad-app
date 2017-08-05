@@ -5,6 +5,38 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var band ={
+    title:'Priyanshu Gandhhi',
+    heading:'THE BAND',
+    content: `We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
+};
+function createTemplate(data) {
+  var title=data.title;
+  var heading=data.heading;
+  var content=data.content;
+
+var htmltemplate= 
+`<html>
+<head>
+<title> ${title} </title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<h2> ${heading} </h2>
+<br>
+<br>
+<p>${content}</p>
+</div>
+</div>
+</body>
+</html>
+`;
+return htmltemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -18,7 +50,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/band', function (req,res) {
-   res.sendFile(path.join(__dirname, 'ui', 'bandindex.html')); 
+   res.sendFile(createTemplate(band)); 
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
