@@ -1,3 +1,4 @@
 console.log('Loaded!');
-var element = document.getElementsByClassName('center text-big bold');
+var element = document.getElementById('main-text');
+
 element.innerHTML ='New value';
