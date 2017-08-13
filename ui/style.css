@@ -4,15 +4,15 @@ body {
     margin-top: 75px;
 }
 
-.center {
+.center, .footer {
     text-align: center;
 }
 
-.text-big {
+.text-big, .footer {
     font-size: 300%;
 }
 
-.bold {
+.bold , .footer{
     font-weight: bold;
 }
 
