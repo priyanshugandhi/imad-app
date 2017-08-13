@@ -3,9 +3,10 @@ var element = document.getElementById('main-text');
 
 element.innerHTML ='New value';
 var img= document.getElementById('madi');
-
+var marginLeft;
 function moveRight() {
-    img.style.marginLeft+='10px';
+    marginLeft+=10;
+    img.style.marginLeft=marginLeft+ 'px';
 }
 img.onclick = function() {
     var interval= setInterval(moveRight,100);
