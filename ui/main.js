@@ -1,6 +1,6 @@
 
 var counter=0;
-var z=0;
+
 function Right(){
     counter+=10;
     element.style.marginLeft=counter+"px";
@@ -11,7 +11,7 @@ element.onclick=function(){
      var interval=setInterval(Right,5);
      
 };
-
+var z=0;
 var b=document.getElementById("b1");
 b.onclick=function(){
     z+=1;
