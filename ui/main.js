@@ -38,9 +38,10 @@ request.send(null);
 var nameinput=document.getElementById('na');
 var name=nameinput.value;
 var submit=document.getElementById('sub');
-submit.onclick=fucntion(){
-  var list= '';
+submit.onclick=function(){
+  
   var names= ['name1','name2','name3'];
+  var list= '';
   for(var i=0;i<names.length;i++)
   {
       list +='<li>' +names[i] + '</li>';
