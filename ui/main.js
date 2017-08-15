@@ -1,12 +1,12 @@
 
 var counter=0;
-var z=0;
+function Right(){
+    counter+=10;
+    element.style.marginLeft=counter+"px";
+}
+
 var element=document.getElementById("madi");
 element.onclick=function(){
-     for(counter=0;counter>=0;counter++)
-     {
-        z+=counter; 
-         element.style.marginLeft=z+"px";
-     }
+     var interval=setInterval(Right(),20);
      
 };
