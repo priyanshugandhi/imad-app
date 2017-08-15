@@ -14,9 +14,25 @@ element.onclick=function(){
 var z=0;
 var b=document.getElementById("b1");
 b.onclick=function(){
-    z+=1;
-    var span=document.getElementById("count");
-    span.innerHTML=z;
+
+
+var request=new XMLHttpRequest();
+
+
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE)
+    {
+        if(request.status===200)
+        {
+            var z=request.responseText;
+            var span=document.getElementById("count");
+            span.innerHTML=z.toString();
+        }
+    }
+    
+};
+request.open('GET','http://gandhipriyanshu.imad.hasura-app.io/counter');
+request.send(null);
 };
 
 
