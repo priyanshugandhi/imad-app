@@ -7,6 +7,6 @@ function Right(){
 
 var element=document.getElementById("madi");
 element.onclick=function(){
-     var interval=setInterval(Right,20);
+     var interval=setInterval(Right,5);
      
 };
