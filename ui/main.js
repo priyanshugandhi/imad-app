@@ -10,3 +10,13 @@ element.onclick=function(){
      var interval=setInterval(Right,5);
      
 };
+
+var b=document.getElementById("b1");
+b.onclick=function(){
+    counter+=1;
+    var span=document.getElementById("count");
+    span.innerHTML=counter;
+};
+
+
+
