@@ -35,7 +35,16 @@ request.open('GET','http://gandhipriyanshu.imad.hasura-app.io/counter');
 request.send(null);
 };
 
-
-var 
-
+var nameinput=document.getElementById('na');
+var name=nameinput.value;
+var submit=document.getElementById('sub');
+submit.onclick=fucntion(){
+  var list= '';
+  for(var i=0;i<names.length;i++)
+  {
+      list +='<li>' +names[i] + '</li>';
+  }
+  var ul=document.getElementById('namelsit');
+  ul.innerHTML=list;
+}
 
