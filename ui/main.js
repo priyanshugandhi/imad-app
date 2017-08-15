@@ -43,11 +43,12 @@ submit.onclick=function(){
     var nameinput=document.getElementById('na');
     var name=nameinput.value;
 
-              names=name.toString();
+              
               var list= '';
               for(var i=0;i<names.length;i++)
               {
-                 list +='<li>'+ names[i] + '</li>';
+               
+                 list +='<li>'+  name.toString() + '</li>';
               }
               var ul=document.getElementById('namelist');
               ul.innerHTML=list; 
