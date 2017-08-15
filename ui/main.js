@@ -11,7 +11,7 @@ element.onclick=function(){
      var interval=setInterval(Right,5);
      
 };
-var z=0;
+
 var b=document.getElementById("b1");
 b.onclick=function(){
 
