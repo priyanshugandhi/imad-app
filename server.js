@@ -100,8 +100,17 @@ app.get('/submit-name', function (req,res) {
 
 app.get('/:bandname', function (req,res) {
     
-    var bandname=req.params.bandname;
-   res.send(createTemplate(bands[bandname])); 
+    pool.query("SELECT * FROM band WHERE Title="+ req.params.bandname+' ',function(err,result){
+         if(result.rows.length===0) {
+             res.status(404).send("BAnd not found");
+         }
+         else{
+         res.send(createTemplate(bands[bandname]));
+         }
+    
+        
+    });
+    
 });
 
 
