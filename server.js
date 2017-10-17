@@ -98,7 +98,7 @@ app.get('/submit-name', function (req,res) {
 });
 
 
-app.get('/:bandname', function (req,res) {
+app.get('/band/:bandname', function (req,res) {
     
     pool.query("SELECT * FROM band WHERE title= '"+ req.params.bandname +"'" , function(err,result){
         if(err){
