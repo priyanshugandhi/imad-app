@@ -88,7 +88,7 @@ app.get('/submit-name', function (req,res) {
 
 app.get('/:bandname', function (req,res) {
     
-    pool.query("SELECT * FROM band WHERE title= '"+ req.params.bandname +"'" , function(err,result){
+    pool.query("SELECT * FROM band WHERE title= $1", [req.params.bandname], function(err,result){
         if(err){
         res.status(500).send(err.toString());
         }
