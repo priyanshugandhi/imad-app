@@ -12,18 +12,6 @@ var config= {
 var app = express();
 app.use(morgan('combined'));
 
-var bands={
- 'band1' : {
-    title:'Priyanshu Gandhi',
-    heading:'THE BAND',
-    content: `We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
-          },
- 'band2' : {
-    title:'Priyanshu Gandhi',
-    heading:'THE BAND',
-    content: `We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`
-          }
-};
 
 function createTemplate(data) {
   var title=data.title;
